@@ -52,7 +52,7 @@ module.exports.getUserByName = function(username,callback){
     User.findOne(query,callback)
 }
 
-//
+//เปรียบเทียบ password
 module.exports.comparePassword = function(password,hash,callback){
     bcrypt.compare(password,hash,function(err,isMatch){
         callback(null,isMatch)
